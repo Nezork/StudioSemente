@@ -321,6 +321,14 @@ footer {
     h2 {
         font-size: 1.5rem;
     }
+
+    .portfolio-item img, 
+    .portfolio-image {
+        height: 250px; /* Reduz a altura das imagens */
+    }
+    .logo {
+        height: 100px; /* Reduz a altura da logo */
+    }
 }
 
 @media (max-width: 480px) {
@@ -336,8 +344,15 @@ footer {
     .highlight-item {
         padding: 20px 10px;
     }
-}
+    .portfolio-item img, 
+    .portfolio-image {
+        height: 200px; /* Reduz ainda mais a altura das imagens */
+    }
 
+    .logo {
+        height: 80px; /* Reduz ainda mais a altura da logo */
+    }
+}
 
 .contact-form {
     max-width: 600px;
