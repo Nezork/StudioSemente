@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Studio Semente</title>
+    <title>Consultoria de Marca - Studio Semente</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -22,17 +22,17 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                     <li class="dropdown">
-                        <a href="#">Serviços <i class="fas fa-chevron-down"></i></a>
+                        <a href="#" class="active">Serviços <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="identidade-visual.html">Identidade Visual</a></li>
                             <li><a href="design-grafico.html">Design Gráfico</a></li>
                             <li><a href="web-design.html">Web Design</a></li>
                             <li><a href="social-media.html">Social Media</a></li>
-                            <li><a href="consultoria.html">Consultoria</a></li>
+                            <li><a href="consultoria.html" class="active">Consultoria</a></li>
                         </ul>
                     </li>
                     <li><a href="portfolio.html">Portfólio</a></li>
-                    <li><a href="contato.html" class="active">Contato</a></li>
+                    <li><a href="contato.html">Contato</a></li>
                 </ul>
                 <div class="mobile-menu-toggle">
                     <span></span>
@@ -54,67 +54,57 @@
                     <li><a href="design-grafico.html">Design Gráfico</a></li>
                     <li><a href="web-design.html">Web Design</a></li>
                     <li><a href="social-media.html">Social Media</a></li>
-                    <li><a href="consultoria.html">Consultoria</a></li>
+                    <li><a href="consultoria.html" class="active">Consultoria</a></li>
                 </ul>
             </li>
             <li><a href="portfolio.html">Portfólio</a></li>
-            <li><a href="contato.html" class="active">Contato</a></li>
+            <li><a href="contato.html">Contato</a></li>
         </ul>
     </div>
 
-    <!-- Conteúdo da Página - Contato -->
-    <section class="page-header">
+    <!-- Conteúdo da Página - Consultoria -->
+    <section class="page-header" style="background-image: url("fundo-hero-section-consulto.jpg"); background-size: cover; background-position: center;">
+        <div class="hero-overlay"></div>
         <div class="container">
-            <h1>Entre em Contato</h1>
-            <p>Vamos conversar sobre como podemos ajudar sua marca a crescer.</p>
+            <h1>Consultoria de Marca</h1>
+            <p>Análise estratégica para otimizar sua marca existente.</p>
         </div>
     </section>
 
-    <section class="contact-page">
+    <section class="service-details">
         <div class="container">
-            <div class="contact-content">
-                <div class="contact-form-container">
-                    <h2>Envie sua Mensagem</h2>
-                    <form id="contact-form" action="https://formsubmit.co/studiosementemarketing@gmail.com" method="post"> <!-- Atualizar action se necessário -->
-                        <div class="form-group">
-                            <label for="name">Nome:</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Assunto:</label>
-                            <input type="text" id="subject" name="subject">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensagem:</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-membro">Enviar Mensagem</button>
-                    </form>
-                </div>
-                <div class="contact-info">
-                    <h2>Informações de Contato</h2>
-                    <h3>Estamos aqui para você!</h3>
-                       <p>Nossa equipe está pronta para ouvir suas ideias, esclarecer todas 
-                        as suas dúvidas e dar os primeiros passos ao seu lado. <br>Quer entender melhor
-                        como funciona? <br> Quer saber por onde começar? <br> Fique à vontade para nos chamar! <br> 
-                        Vamos conversar, explorar possibilidades e transformar seu projeto em algo incrível.</p>
+            <div class="service-content">
+                <div class="service-text">
+                    <h2>Sua Marca Precisa de um Novo Olhar?</h2>
+                    <p>Se sua marca já existe, mas você sente que ela não está comunicando todo o seu potencial ou alcançando os resultados esperados, nossa consultoria pode ajudar. Analisamos sua identidade visual, comunicação e presença digital para identificar pontos de melhoria e oportunidades de crescimento.</p>
+                    <p>Oferecemos um diagnóstico completo e um plano de ação estratégico para revitalizar sua marca e alinhá-la aos seus objetivos de negócio.</p>
+                    
+                    <h2>Como Funciona Nossa Consultoria:</h2>
+                    <ol>
+                        <li><strong>Diagnóstico Inicial:</strong> Coleta de informações sobre a marca, mercado e concorrência.</li>
+                        <li><strong>Análise da Identidade Visual:</strong> Avaliação do logo, cores, tipografia e aplicações.</li>
+                        <li><strong>Análise da Comunicação:</strong> Verificação da consistência e eficácia da mensagem em todos os canais.</li>
+                        <li><strong>Análise da Presença Digital:</strong> Avaliação do site, redes sociais e outras plataformas online.</li>
+                        <li><strong>Relatório de Diagnóstico:</strong> Apresentação dos pontos fortes, fracos e oportunidades.</li>
+                        <li><strong>Plano de Ação:</strong> Sugestões práticas e estratégicas para otimização da marca.</li>
+                    </ol>
+
+                    <h2>Benefícios da Consultoria:</h2>
                     <ul>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:studiosementemarketing@gmail.com">studiosementemarketing@gmail.com</a></li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+5511934566594">(11) 93456-6594</a></li>
-                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5511934566594" target="_blank">WhatsApp</a></li>
-                        <!-- Adicionar endereço se relevante -->
-                        <!-- <li><i class="fas fa-map-marker-alt"></i> Endereço Fictício, 123 - São Paulo, SP</li> -->
+                        <li>Visão Externa e Imparcial sobre sua Marca</li>
+                        <li>Identificação de Problemas e Oportunidades</li>
+                        <li>Direcionamento Estratégico para Melhorias</li>
+                        <li>Otimização do Investimento em Marketing</li>
+                        <li>Alinhamento da Marca com os Objetivos do Negócio</li>
+                        <li>Potencialização dos Resultados</li>
                     </ul>
-                    <br>
-                    <h2>Siga-nos</h2>
-                    <div class="social-icons-contact">
-                        <a href="https://www.instagram.com/studiosemente.designe?igsh=MWRlajdwYTQ4eGJuYQ=="><i class="fab fa-instagram"></i></a>
-                       
-                    </div>
+                    
+                    <a href="contato.html" class="btn-membro" style="margin-top: 30px;">Agende sua Consultoria</a>
+                </div>
+                <div class="service-image">
+                    <img src="cons 1.jpg" alt="Consultoria de Marca 1">
+                    <img src="cons 2.jpg" alt="Consultoria de Marca 2" style="margin-top: 20px;">
+                    <img src="grafico_clientes_consultoria.png" alt="Gráfico de Clientes" style="margin-top: 20px;">
                 </div>
             </div>
         </div>
@@ -165,6 +155,5 @@
     </a>
 
     <script src="script.js"></script>
-    <!-- Adicionar script para validação/envio do formulário se necessário -->
 </body>
 </html>
