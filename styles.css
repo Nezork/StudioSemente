@@ -338,6 +338,7 @@ nav ul.desktop-menu li a.active::after {
 /* Seção Nossos Serviços */
 .nossos-servicos {
     background-color: var(--dark-wood);
+    text-align: center;
 }
 
 .nossos-servicos h2 {
@@ -347,70 +348,98 @@ nav ul.desktop-menu li a.active::after {
     color: var(--off-white);
 }
 
+/* NOVO: Centralizar cards e permitir 3 em cima, 2 embaixo */
 .servicos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
     margin-top: 50px;
+    text-align: center;
 }
 
 .servico-card {
     display: block;
     position: relative;
     overflow: hidden;
+    text-align: center;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(119, 95, 78, 0.2);
+    flex: 0 1 30%;
+    max-width: 30%;
+    min-width: 260px;
+    margin-bottom: 30px;
 }
 
-.servico-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+@media (max-width: 1024px) {
+    .servico-card {
+        flex: 0 1 45%;
+        max-width: 45%;
+    }
+}
+@media (max-width: 768px) {
+    .servicos-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .servico-card {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
 }
 
-.servico-card img {
-    width: 100%;
-    height: 350px; /* Altura fixa para os cards */
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.servico-card:hover img {
-    transform: scale(1.05);
-}
-
+/* Efeito do h3 subindo */
 .servico-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    background: linear-gradient(to top, rgba(48, 38, 32, 0.9), rgba(48, 38, 32, 0));
-    padding: 40px 20px 20px;
+    right: 0;
+    height: 100%;
+   
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; /* <-- centraliza horizontalmente */
+    padding: 30px 20px 20px 20px;
+    transition: background 0.3s;
     text-align: center;
-    transition: background 0.3s ease;
 }
 
-.servico-card:hover .servico-overlay {
-    background: linear-gradient(to top, rgba(48, 38, 32, 1), rgba(48, 38, 32, 0.1));
+.servico-card:hover .servico-overlay,
+.servico-card:focus .servico-overlay {
+    background-color: rgba(0, 0, 0, 0.781); /* Escurece ao passar o mouse */
 }
-
 .servico-overlay h3 {
-    color: var(--off-white);
-    font-size: 1.4rem;
-    margin-bottom: 10px;
+    margin: 0;
+    transform: translateY(120px);
+    transition: transform 0.4s cubic-bezier(.4,1.7,.7,.9);
+    z-index: 2;
+    font-size: 1.3em;
+    text-align: center; /* <-- garante centralização do texto */
 }
+
+.servico-card:hover .servico-overlay h3,
+.servico-card:focus .servico-overlay h3 {
+    transform: translateY(0); /* Sobe ao passar o mouse */
+    
+}
+
+
 
 .servico-overlay p {
-    color: var(--h-gray);
-    font-size: 0.9rem;
-    margin-bottom: 0;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    max-height: 0;
+    transition: opacity 0.3s, max-height 0.3s;
+    margin-top: 10px;
 }
 
-.servico-card:hover .servico-overlay p {
+.servico-card:hover .servico-overlay p,
+.servico-card:focus .servico-overlay p {
     opacity: 1;
+    max-height: 200px;
 }
 
 /* Seção Por que escolher o Studio Semente? (Ascensão) */
@@ -559,11 +588,6 @@ nav ul.desktop-menu li a.active::after {
     color: var(--wood-bark);
     border: 1px solid var(--cloudy);
 }
-
-
-
-
-
 
 /* Footer */
 footer {
@@ -848,7 +872,8 @@ footer {
     }
     
     .servicos-grid {
-        grid-template-columns: 1fr; /* Uma coluna em mobile */
+        flex-direction: column;
+        align-items: center;
     }
     
     .beneficios-grid {
