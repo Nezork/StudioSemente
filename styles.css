@@ -273,6 +273,7 @@ nav ul.desktop-menu li a.active::after {
     position: relative;
     overflow: hidden;
     background-color: var(--wood-bark); /* Cor de fundo caso imagem não carregue */
+    height: 100vh; /* Altura total da viewport */
 }
 
 .hero-overlay {
@@ -855,6 +856,7 @@ footer {
     .hero {
         padding-top: 120px; /* Ajustar padding para mobile */
         padding-bottom: 80px;
+        margin-top: 25px;
     }
 
     .hero-content {
@@ -883,6 +885,10 @@ footer {
     
     .portfolio-grid {
         grid-template-columns: 1fr;
+    }
+
+    .page-header {
+        margin-top: 35px;
     }
 
     .service-content {
@@ -919,6 +925,15 @@ footer {
 
     .page-header h1 {
         font-size: 2.2rem;
+    }
+
+    .contact-info ul{
+        font: 15px 'Poppins', sans-serif;
+        color: var(--h-gray);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
     }
 }
 
@@ -1074,4 +1089,36 @@ footer {
     gap: 15px;
     margin-top: 30px;
     font-size: 35px;
+}
+
+
+.scroll-indicator {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    z-index: 10;
+    text-align: center;
+}
+.scroll-indicator a {
+    color: #fff;
+    font-size: 2.5rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+.scroll-indicator a:hover {
+    opacity: 1;
+}
+
+.scroll-indicator i {
+    animation: bounceDown 1.5s infinite;
+}
+
+@keyframes bounceDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(18px);
+    }
 }
